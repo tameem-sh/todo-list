@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    background-color: #607d8b;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.container h2 {
+    color: #ffffff;
+    margin: 20px auto;
+    font-size: 2.5rem;
+}
+
+.container form {
+    min-width: 400px;
+    margin: 20px auto;
+    color: #ffffff;
+    display: flex;
+}
+
+@media (max-width: 450px) {
+    .container form {
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 350px) {
+    .container form {
+        min-width: auto;
+    }
+}
+
+.container form input {
+    border: none;
+    height: 2rem;
+    width: 75%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.container form input:focus{
+    outline: none;
+}
+
+.container form span {
+    height: 2rem;
+    width: 25%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #d9d9d9;
+    color: #555;
+    border: none;
+    cursor: pointer;
+}
+
+.container form span:hover {
+    background-color: #a2a2a2;
+}
+
+.todolist {
+    background-color: #b7b7b7;
+    list-style: none;
+}
+
+.todolist .task {
+    height: 2.5rem;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    background-color: #f8f8ff;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.todolist .fa-solid {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.todolist .fa-check {
+    color: #88ff88;
+}
+
+.todolist .fa-trash-can {
+    color: #ff8888;
+}
+
+.done {
+    font-weight: 400;
+    background-color: #e3e3e3 !important;
+}
+
+
+.todolist .task::before {
+    content: "";
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    background-color: #88ff88;
+    z-index: 1;
+    border-radius: 50%;
+    left: -1.5rem;
+}
+
+.done::before {
+    content: "";
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    background-color: #888888 !important;
+    z-index: 99 !important;
+    border-radius: 50%;
+    left: -1.5rem;
+}
